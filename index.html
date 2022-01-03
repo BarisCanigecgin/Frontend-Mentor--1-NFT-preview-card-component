@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    html{
+      font-size:10px;
+    }
+    .container{ 
+      max-width:1440px;
+      background-color: hsl(217, 54%, 11%);
+      margin:0 auto;
+      padding:10rem;
+      height:95vh;
+    }
+    .nftCard{
+      display:flex;
+      flex-direction:column;
+      background-color: hsl(216, 50%, 16%);
+      width:30rem;
+      margin:0 auto;
+      border-radius:2rem;
+      padding:2rem;
+    }
+    .nftCard div{
+      margin-bottom:1.5rem;
+    }
+    .nftCard .nftImage{
+      position: relative;
+    }
+    .nftCard .nftImage img{
+      width:100%;
+      border-radius:1rem;
+    }
+    .nftCard .cardTitle h2{
+      font-size: 2.6rem;
+      color: hsl(0, 0%, 100%);
+      font-family: 'Outfit', sans-serif;
+    }
+    .nftCard .cardTitle h2:hover{
+     color: hsl(178, 100%, 50%);
+     cursor: pointer;
+    }
+    .nftCard .cardDesc p{
+      font-size: 1.8rem;
+      color:hsl(215, 51%, 70%);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+    }
+    .nftCard .twoColumn{
+      display:flex;
+      flex-direction: row;
+    }
+    .hr hr{
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid hsl(215, 51%, 70%);
+    }
+    .nftCard .creator{
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+    }
+    .nftCard .creator img{
+      width: 4rem;
+      border:2px solid white;
+      border-radius:4rem;
+      margin-right: 3rem;
+    }
+    .nftCard .creator .creatorName{
+      font-size: 1.6rem;
+      color:hsl(0, 0%, 100%);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+    }
+    .nftCard .creator .creatorName span{
+      color:hsl(215, 51%, 70%);
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+    }
+    .nftCard .twoColumn .price{
+      display:flex;
+      align-items:center;
+    }
+    .nftCard .twoColumn .price p{
+      font-size: 1.8rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color:hsl(178, 100%, 50%);
+    }
+    .nftCard .twoColumn .timeLeft{
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+
+    }
+    .nftCard .twoColumn .timeLeft p{
+      font-size: 1.8rem;
+      font-family: 'Outfit', sans-serif;
+      color:hsl(215, 51%, 70%);
+      margin-left:1rem;
+    } 
+    .nftCard .twoColumn .price img{
+      margin-right: 1rem;
+    }
+    .priceTime{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items:center;
+    }
+    .nftImage .viewImage{ 
+      background:hsla(178, 100%, 50%, 0.4);
+      width:100%;
+      height:100%;
+      position: absolute;
+      border-radius:1rem;
+      display:none;
+    }
+    .nftImage .viewImage img{ 
+      width:15%;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    }
+    .nftImage:hover > .viewImage{
+      display:block;
+      cursor: pointer;
+    }
+    .creator .creatorName:hover{
+      color:hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 440px){
+        .container{
+        padding:2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nftCard">
+      <div class="nftImage">
+        <div class="viewImage"><img src="images/icon-view.svg" /></div>
+        <img src="images/image-equilibrium.jpg" />
+      </div>
+      <div class="cardTitle"><h2>Equilibrium #3429</h2></div>
+      <div class="cardDesc"><p> Our Equilibrium collection promotes balance and calm.</p></div>
+      <div class="twoColumn priceTime">
+        <div class="price"><img src="images/icon-ethereum.svg" /><p>0.041 ETH</p></div>
+        <div class="timeLeft"><img src="images/icon-clock.svg" /><p>3 days left</p></div>
+      </div>
+      <div class="hr"><hr></div>
+      <div class="twoColumn creator">
+        <div class="creatorPhoto">
+          <img src="/images/image-avatar.png">
+        </div>
+        <div class="creatorName"><span>Creation of</span> Jules Wyvern</div>
+      </div>
+    </div>
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
